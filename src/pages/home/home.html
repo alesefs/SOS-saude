@@ -1,0 +1,73 @@
+<ion-content>
+
+  <ion-grid no-padding no-margin no-bounce>
+      
+    <ion-row class="fullContent">
+
+        <ion-col col-12 class="title">
+          0/6
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+            <span class="fnt fa fa-medkit"></span>
+            <span class="txt">CADASTRO</span>
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+            <span class="fnt fa fa-file-text-o"></span>
+            <span class="txt">ANALÍSE</span>
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+            <span class="fnt fa fa-hospital-o"></span>
+            <span class="txt">HOSPITAIS</span>
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+            <span class="fnt fa fa-volume-control-phone"></span>
+            <span class="txt">SAMU 192</span>
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+            <span class="fnt fa fa-info-circle"></span>
+            <span class="txt">INFORMAÇÕES</span>
+        </ion-col>
+        
+        <ion-col col-sm-4 col-6 class="rectItem">
+          
+          <div class="others" ion-button clear (click)="openOptions()" *ngIf="othersClicked">
+            <span class="fnt fa fa-cog"></span>
+            <span class="txt">AJUSTES</span>
+          </div>
+
+          <ion-row class="miniContent" *ngIf="closeClicked">
+          
+            <ion-col col-sm-6 col-6 class="mini-rectItem">
+                <span class="mini-fnt fa fa-paint-brush"></span>
+                <span class="mini-txt">CORES</span>
+            </ion-col>
+
+            <ion-col col-sm-6 col-6 class="mini-rectItem textSize" ion-button clear (click)="textOptions()"><!--*ngIf="textClicked">-->
+                <span class="mini-fnt fa fa-text-height"></span>
+                <span class="mini-txt">TEXTO</span>
+            </ion-col>
+          
+            <ion-col col-sm-6 col-6 class="mini-rectItem">
+                <span class="mini-fnt fa fa-user-circle-o"></span>
+                <span class="mini-txt">SOBRE</span>
+            </ion-col>
+
+            <!-- <ion-col col-sm-6 col-6 class="mini-rectItem" ion-button clear (click)="closeOptions()" strong *ngIf="closeClicked"> -->
+            <ion-col col-sm-6 col-6 class="mini-rectItem" ion-button clear (click)="closeOptions()">
+                <span class="mini-fnt fa fa-window-close"></span>
+                <span class="mini-txt">VOLTAR</span>
+            </ion-col>
+          
+          </ion-row>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
